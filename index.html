@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jovian Drift SOS</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+    <form method="post" action="#">
+      <fieldset>
+        <legend>Pilot Credentials</legend>
+        <label for="pilot-name">Pilot Name:</label>
+        <input
+          type="text"
+          id="pilot-name"
+          name="pilot_name"
+          required
+          placeholder="Enter name"
+        />
+        <label for="Access code">Access code</label>
+        <input type="password" id="Access code" name="Access_code" required />
+        <label for="Command Email">Command Email:</label>
+        <input type="email" id="command email" name="email" required />
+      </fieldset>
+      <fieldset>
+        <legend>Vessel Diagnostics</legend>
+        <label for="Hull Damage (%)">Hull Damage (%)</label>
+        <input type="number" id="Hull Damage" name="hull_damage" required />
+        <label for="Emergency Level">Emergency Level</label>
+        <select id="Emergency Level" name="Emergency_Level" required>
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>ission Log & Evidence</legend>
+        <label for="SOS Message">SOS Message</label>
+        <textarea id="SOS Message" name="SOS_Message" rows="3"></textarea>
+        <div>
+          <input type="checkbox" id="quarantine" name="quarantine" required />
+          <label for="quarantine">I agree to quarantine protocols</label>
+        </div>
+      </fieldset>
+      <button type="submit">INITIATE TRANSMISSION</button>
+      <button type="reset">RESET SYSTEM</button>
+    </form>
+    <script src="./scripts/launch.js"></script>
+  </body>
+</html>
